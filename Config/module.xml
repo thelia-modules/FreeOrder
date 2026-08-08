@@ -15,13 +15,13 @@
         <language>en_US</language>
         <language>fr_FR</language>
     </languages>
-    <version>2.5.5</version>
+    <version>3.0.0</version>
     <author>
         <name>Franck Allimant</name>
         <company>CQFDev</company>
         <email>franck@cqfdev.fr</email>
     </author>
     <type>payment</type>
-    <thelia>2.5.5</thelia>
-    <stability>alpha</stability>
+    <thelia>3.0.0</thelia>
+    <stability>prod</stability>
 </module>
