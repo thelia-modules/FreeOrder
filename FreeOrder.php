@@ -29,13 +29,14 @@ class FreeOrder extends AbstractPaymentModule
         return round($this->getCurrentOrderTotalAmount(), 4) == 0;
     }
 
-    public function pay(Order $order): Response
+    public function pay(Order $order): ?Response
     {
         $event = new OrderEvent($order);
         $event->setStatus(OrderStatusQuery::getPaidStatus()->getId());
         $this->getDispatcher()->dispatch($event, TheliaEvents::ORDER_UPDATE_STATUS);
 
-        return new Response('');
+        // Nothing to display: the checkout goes on to the order confirmation.
+        return null;
     }
 
     /**
